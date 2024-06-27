@@ -59,9 +59,14 @@ export const SubmitButton = styled.button.attrs({
   cursor: pointer;
 
 
-  &:hover {
+  &:not(:disabled):hover {
     background: ${props => props.theme["green-700"]};
     transition: background-color 0.2s;
+  }
+
+  &:disabled{
+    opacity: 0.5;
+    cursor: not-allowed
   }
 `;
 
